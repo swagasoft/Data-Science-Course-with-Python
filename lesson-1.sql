@@ -55,7 +55,7 @@ SELECT name, website, primary_poc
 FROM accounts
 WHERE name = 'Exxon Mobil';
 
-
+--  divide standard_amount_usd by poster_amt_usd, return as unit price.
 SELECT id, account_id, standard_amt_usd/standard_qty AS unit_price
 FROM orders
 LIMIT 10;
