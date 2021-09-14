@@ -1,0 +1,24 @@
+how big a terminal is
+echo $COLUMNS x $LINES
+
+list all pdf documents
+ls -l Documents/*.pdf
+
+// display web props to terminal
+curl -L 'http://google.com'
+
+// save web to a file
+curl -o google.html -L 'http://google.com'
+
+// view file just like cat command
+less filename;
+b to go back
+/ to search
+q to quit
+
+
+// grep search for text in a file
+grep shell dictionary.text
+
+// pass grep output into  less
+grep shell dictionary.txt | less

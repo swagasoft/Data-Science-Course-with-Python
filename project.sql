@@ -186,7 +186,7 @@ ORDER BY 2,1
 
 
 
--- Finally, for each of these top 10 paying customers, I would like to find out the difference across 
+-- 3 Finally, for each of these top 10 paying customers, I would like to find out the difference across 
 -- their monthly payments during 2007. Please go ahead and write a query to compare the payment amounts
 --  in each successive month. Repeat this for each of these 10 paying customers. Also, it will be tremendously helpful if
 --  you can identify the customer name who paid the most difference in terms of payments.
