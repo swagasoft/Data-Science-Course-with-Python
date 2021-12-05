@@ -45,7 +45,8 @@ ORDER BY gloss_amt_usd DESC
 LIMIT 5;
 
 
--- Pulls the first 10 rows and all columns from the orders table that have a total_amt_usd less than 500.
+-- Pulls the first 10 rows and all columns from the orders table that have a 
+total_amt_usd less than 500.
 SELECT *
 FROM orders WHERE total_amt_usd < 500
 LIMIT 5;
@@ -76,24 +77,28 @@ SELECT name
 FROM accounts
 WHERE name LIKE '%s';
 
--- Use the accounts table to find the account name, primary_poc, and sales_rep_id for Walmart, Target, and Nordstrom.
+-- Use the accounts table to find the account name, primary_poc, and sales_rep_id 
+for Walmart, Target, and Nordstrom.
 SELECT  name, primary_poc, sales_rep_id
 FROM accounts WHERE name IN ('walmart','Target',
                             'Nordstrom');
 
 
--- Use the web_events table to find all information regarding individuals who were contacted via the channel of organic or adwords.
+-- Use the web_events table to find all information regarding individuals who were contacted
+ via the channel of organic or adwords.
 SELECT *
 FROM web_events
 WHERE channel IN ('organic', 'adwords');
 
 -- Use the accounts table to find the account name,
---  primary poc, and sales rep id for all stores except Walmart, Target, and Nordstrom.
+--  primary poc, and sales rep id for all stores except Walmart,
+ Target, and Nordstrom.
 SELECT * FROM accounts WHERE name NOT 
 IN ('Target','Walmart');
 
 
--- All companies whose names do not contain the string 'one' somewhere in the name.
+-- All companies whose names do not contain the string 'one'
+ somewhere in the name.
 SELECT * FROM web_events WHERE channel NOT 
 IN ('organic','adwords');
 
@@ -117,11 +122,13 @@ WHERE column >= 6 AND column <= 10
 WHERE column BETWEEN 6 AND 10
 
 
--- Write a query that returns all the orders where the standard_qty is over 1000, the poster_qty is 0, and the gloss_qty is 0.
+-- Write a query that returns all the orders where the standard_qty is over 1000, 
+the poster_qty is 0, and the gloss_qty is 0.
 SELECT * FROM orders WHERE standard_qty >1000
 AND poster_qty = 0 AND gloss_qty = 0;
 
--- Using the accounts table, find all the companies whose names do not start with 'C' and end with 's'.
+-- Using the accounts table, find all the companies whose names do
+ not start with 'C' and end with 's'.
 SELECT name
 FROM accounts
 WHERE name NOT LIKE 'C%' AND name LIKE '%s';
